@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link href="styles/styles.css" rel="stylesheet">
+    <script defer src="js/employee-management.js"></script>
+</head>
+<body>
+    <header>
+        <h2>Employee Management System</h2>
+    </header>
+
+    <section id="employee-form-section">
+        <h3>Add New Employee</h3>
+        <form id="employeeForm" aria-label="Add Employee Form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter name">
+                <span id="nameError" class="error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" placeholder="Enter title">
+                <span id="titleError" class="error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="extension">Extension:</label>
+                <input type="text" id="extension" placeholder="Enter extension" maxlength="4">
+                <span id="extensionError" class="error" aria-live="polite"></span>
+            </div>
+
+            <button type="button" id="addEmployee">Add Employee</button>
+        </form>
+    </section>
+
+    <section id="employee-list-section">
+        <header>
+            <h3 id="employeeCount">Showing 0 Employees</h3>
+        </header>
+        <article>
+            <table aria-describedby="employeeCount">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Title</th>
+                        <th>Extension</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody">
+                </tbody>
+            </table>
+        </article>
+    </section>
+</body>
+</html>
